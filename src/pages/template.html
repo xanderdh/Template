@@ -1,0 +1,203 @@
+@@include('src/modules/head/head.html', {"title":"Template"})
+
+
+<div class="wrapper">
+    @@include('src/modules/header/header.html')
+    <div class="container">
+        <br>
+        <h1 style="text-align: center;">typography</h1>
+        <br>
+        <div class="static-content">
+            <br>
+            <h2>static content</h2>
+            <br>
+            <h1>Heading H1</h1>
+            <h2>Heading H2</h2>
+            <h3>heading H3</h3>
+            <h4>heading H4</h4>
+            <h5>heading H5</h5>
+            <h6>heading H6</h6>
+            <br>
+            <a href="#">link example</a>
+            <br>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet commodi explicabo, fugit iure natus
+                quibusdam sint ullam! Deleniti dolorem esse libero quisquam repellat sunt? Autem blanditiis facere harum
+                nulla quaerat!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consectetur consequatur cum cupiditate
+                deleniti deserunt et laudantium libero
+                magni
+                maiores modi odio quidem, quod? Dolor dolorem recusandae sunt velit voluptatibus. Lorem ipsum dolor sit
+                amet, consectetur adipisicing
+                elit. Animi, aperiam asperiores cumque cupiditate deleniti distinctio dolore error fugiat fugit, in
+                incidunt libero nesciunt odit possimus
+                quisquam sit suscipit temporibus velit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusamus aperiam architecto assumenda
+                culpa eligendi inventore ipsa iusto labore molestiae, mollitia non numquam, optio porro quia quis
+                reiciendis sit voluptatem
+                voluptates.<br>
+                <strong>strong</strong>,<br>
+                <i>italic</i>
+            </p>
+
+            <br>
+            <br>
+
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+            <br>
+            <ol>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+            </ol>
+            <br>
+            <table>
+                <thead>
+                <tr>
+                    <th>Шапка таблицы</th>
+                    <th>Шапка таблицы</th>
+                    <th>Шапка таблицы</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Ячейка таблицы</td>
+                    <td>Ячейка таблицы</td>
+                    <td>Ячейка таблицы</td>
+                </tr>
+                <tr>
+                    <td>Ячейка таблицы</td>
+                    <td>Ячейка таблицы</td>
+                    <td>Ячейка таблицы</td>
+                </tr>
+                <tr>
+                    <td>Ячейка таблицы</td>
+                    <td>Ячейка таблицы</td>
+                    <td>Ячейка таблицы</td>
+                </tr>
+                <tr>
+                    <td>Ячейка таблицы</td>
+                    <td>Ячейка таблицы</td>
+                    <td>Ячейка таблицы</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <h1 style="text-align: center;">buttons</h1>
+        <br>
+        <button class="btn">Button</button>
+        <br><br>
+        <button class="btn disabled">Button "disabled!"</button>
+        <br><br>
+        <button class="btn btn--close ">Button close</button>
+        <br><br>
+        <button class="btn btn--close disabled">Button close "disabled!"</button>
+        <br><br>
+        <a href="#" class="btn btn--link">Button link</a>
+        <br><br>
+
+
+        <!--FORM-->
+        <br><br>
+        <h1 style="text-align: center;">form's elements</h1>
+        <a href="https://github.com/Dimox/jQueryFormStyler"
+           style="text-align: center; display: block;margin-bottom: 10px;">jquery-form-styler</a>
+        <br>
+        <input type="text" class="input" placeholder="Ваше имя">
+        <br>
+        <input type="text" class="input" placeholder="disabled input" disabled="">
+        <br><br>
+        <p>radio, checkbox, select theme src/static/styles/plugins/jquery.formstyler.theme.scss</p>
+        <br>
+
+        <div>
+            <label>
+                <input name="radio" type="radio" class="radio" checked>
+                <span>radio button checked</span>
+            </label>
+        </div>
+        <br>
+        <div>
+            <label>
+                <input name="radio" type="radio" class="radio">
+                <span>radio button</span>
+            </label>
+        </div>
+        <br>
+        <div>
+            <label>
+                <input name="radio" type="radio" class="radio">
+                <span>radio button</span>
+            </label>
+        </div>
+        <br>
+        <div>
+            <label>
+                <input name="radio" type="radio" class="radio" disabled>
+                <span>radio button disabled</span>
+            </label>
+        </div>
+        <br><br>
+
+        <div>
+            <label>
+                <input type="checkbox" class="checkbox" checked>
+                <span>checkbox checked</span>
+            </label>
+        </div>
+        <br>
+        <div>
+            <label>
+                <input type="checkbox" class="checkbox">
+                <span>checkbox</span>
+            </label>
+        </div>
+        <br>
+        <div>
+            <label>
+                <input type="checkbox" class="checkbox">
+                <span>checkbox</span>
+            </label>
+        </div>
+        <br>
+        <div>
+            <label>
+                <input type="checkbox" class="checkbox" disabled>
+                <span>checkbox disabled</span>
+            </label>
+        </div>
+
+        <br><br>
+
+        <select name="select" class="select">
+            <option value="0">option 1</option>
+            <option value="1">option 2</option>
+            <option value="2">option 3</option>
+            <option value="3">option 4</option>
+            <option value="4">option 5</option>
+        </select>
+
+        <br><br>
+
+        <svg>
+            <use xlink:href="#sandwich"></use>
+        </svg>
+
+    </div>
+
+
+</div>
+
+@@include('src/modules/footer/footer.html')
+
+@@include('src/modules/foot/foot.html')

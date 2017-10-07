@@ -1,0 +1,43 @@
+//----------------------------------------------------//
+// Variables                                          //
+//----------------------------------------------------//
+
+// Variables => Fonts
+//----------------------------------------------------//
+$mainFont: 'Arial';
+$mainFontSize: 16px;
+$mainFontHeight: 1;
+$mainFontWeight: 400;
+$mainFontColor: #000;
+
+$fixFont: sans-serif;
+
+
+//$rub: 'rubl';
+//
+//.rub {
+//  font-style: normal;
+//  font-family: $rub !important;
+//}
+
+// Variables => Typography
+//----------------------------------------------------//
+
+$h1-fz: 35px;
+$h2-fz: 32px;
+$h3-fz: 24px;
+$h4-fz: 20px;
+$h5-fz: 18px;
+$h6-fz: 16px;
+
+
+// Variables => Colors
+//----------------------------------------------------//
+$default: #333333;
+$bodyColor: #fff;
+$red: #dc3836;
+$linkColor: $red;
+
+// Variables => Other
+//----------------------------------------------------//
+$trs: all .3s ease-in-out;

@@ -1,0 +1,24 @@
+//variables
+@import "variables.scss";
+
+//bower components
+@import "../../../bower_components/normalize-scss/sass/normalize/import-now.scss"; 
+//fotns
+@import "fonts.scss";
+//mixin
+@import "mixins&includes.scss";
+//typography
+@import "typography.scss";
+//plugins
+@import "plugins/**/*.scss";
+//layout
+@import "layout.scss";
+
+//form all
+@import "components/*.scss";
+
+
+//pages style
+@import "../../modules/**/*.scss";
+
+@import "pages/*.scss";

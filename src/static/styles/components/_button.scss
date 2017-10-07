@@ -1,0 +1,63 @@
+.btn {
+  cursor: pointer;
+  vertical-align: top;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1;
+  padding: 12px 20px 13px;
+  background: $red;
+  color: #fff;
+  border: 0;
+  border-radius: 0;
+  position: relative;
+  transition: $trs;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  &:hover,
+  &.active {
+    color: #fff;
+    background: #ff4d4b;
+  }
+
+  &:focus {
+    color: #fff;
+    background: #ff4d4b;
+  }
+
+  &.disabled,
+  &[disabled="disabled"],
+  &[disabled] {
+    background: #f19695;
+    color: #ffffff;
+    cursor: not-allowed;
+  }
+
+
+
+
+  &--close {
+    background-color: #aaaaaa;
+    &:hover,
+    &.active {
+      background-color: #292a2c;
+    }
+    &:focus {
+      background-color: #292a2c;
+    }
+    &.disabled,
+    &[disabled="disabled"],
+    &[disabled] {
+      background: #d4d4d4;
+    }
+  }
+  &--link {
+    background-color: $default;
+    color: #fff;
+    width: auto;
+    padding: 12px 32px 13px;
+    &:hover {
+      background-color: #444444;
+    }
+  }
+}
