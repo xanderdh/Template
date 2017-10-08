@@ -1,6 +1,8 @@
 'use strict';
 
 var gulp = require('gulp'),
+    babel = require('gulp-babel'),
+    gulpif = require('gulp-if'),
     gulpsync = require('gulp-sync')(gulp),
     clean = require('gulp-clean'),
     sass = require('gulp-sass'),
@@ -135,7 +137,7 @@ var path = {
     src: {
         root: 'src/',
         html: 'src/pages/*.html',
-        js: 'src/static/scripts/requare.js',
+        js: 'src/static/scripts/*.js',
         styles: 'src/static/styles/',
         sass: 'src/static/styles/main.scss',
         img: 'src/static/assets/img/*.*',
@@ -319,7 +321,6 @@ gulp.task('img:img', function () {
 //---------------------------------------//
 gulp.task('scripts:dev', function () {
     return gulp.src(path.src.js)
-
         .pipe(include({
             hardFail: true,
             includePaths: [
@@ -329,7 +330,9 @@ gulp.task('scripts:dev', function () {
                 __dirname + '/src/static/scripts/'
             ]
         }))
-        .pipe(concat('scripts.js'))
+        .pipe(gulpif('main.js', babel({
+            presets: ['env']
+        })))
         .pipe(removeEmptyLines({
             removeComments: true
         }))
@@ -347,7 +350,9 @@ gulp.task('scripts:build', function () {
                 __dirname + '/src/static/scripts/'
             ]
         }))
-        .pipe(concat('scripts.js'))
+        .pipe(gulpif('main.js', babel({
+            presets: ['env']
+        })))
         .pipe(uglify())
         .pipe(gulp.dest(path.build.js));
 });
