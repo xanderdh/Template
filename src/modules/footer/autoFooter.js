@@ -1,7 +1,7 @@
 ;(function () {
     function autoFooter() {
         if ($('.js-footer').length) {
-            var wrapper = $('.wrapper'),
+            const wrapper = $('.wrapper'),
                 footer = $('.js-footer'),
                 footerHeight = footer.outerHeight();
             footer.css('margin-top', -footerHeight);
@@ -9,11 +9,12 @@
         }
     }
 
-    setTimeout(function(){
-        autoFooter();
-    },100);
+    setTimeout(() => {
+        autoFooter()
+    }, 100);
 
-    $(window).on('resize', function () {
+    $(window).on('resize', () => {
         autoFooter();
     })
+
 }());
