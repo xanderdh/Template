@@ -24,6 +24,7 @@ var gulp = require('gulp'),
     htmltidy = require('gulp-htmltidy'),
     htmlbeautify = require('gulp-html-beautify'),
     replace = require('gulp-replace-task'),
+    sassLint = require('gulp-sass-lint'),
     fileinclude = require('gulp-file-include');
 
 
@@ -138,6 +139,7 @@ var path = {
         js: 'src/static/scripts/requare.js',
         styles: 'src/static/styles/',
         sass: 'src/static/styles/main.scss',
+        sassLint: ['src/static/styles/**/*.scss', 'src/modules/**/*.scss'],
         img: 'src/static/assets/img/*.*',
         pic: ['src/static/assets/pic/**/*.jpg', 'src/static/assets/pic/**/*.png', 'src/static/assets/pic/**/*.svg'],
         fonts: 'src/static/assets/fonts/**/*.*',
@@ -201,6 +203,22 @@ gulp.task('clean', function () {
 // clean css
 gulp.task('clean:css', function (cb) {
     return gulp.src(path.build.css, {read: false}).pipe(clean());
+});
+
+gulp.task('lint', function () {
+    return gulp.src(path.src.sassLint)
+        .pipe(sassLint({
+            files: {ignore: 'src/static/styles/plugins/**/*.scss'},
+            rules: {
+                'quotes' : 0,
+                'property-sort-order' : 0,
+                'empty-line-between-blocks' : 0,
+                'pseudo-element' : 0,
+                'nesting-depth' : 0
+            }
+        }))
+        .pipe(sassLint.format())
+        .pipe(sassLint.failOnError())
 });
 
 //development
@@ -409,6 +427,9 @@ gulp.task('watch', function () {
     watch([path.watch.sass, path.src.modules], function (event, cb) {
         gulp.start('sass:dev');
     });
+    watch([path.watch.sass, path.src.modules], function (event, cb) {
+        gulp.start('lint');
+    });
     watch(path.watch.js, function (event, cb) {
         gulp.start('scripts:dev');
     });
@@ -454,6 +475,7 @@ gulp.task('develop', gulpsync.sync([
     'clean:pic',
     [
         'html:dev',
+        'lint',
         'sass:dev',
         'img:pic',
         'img:img',

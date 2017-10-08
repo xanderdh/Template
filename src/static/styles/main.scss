@@ -1,24 +1,24 @@
 //variables
-@import "variables.scss";
+@import "variables";
 
 //bower components
-@import "../../../bower_components/normalize-scss/sass/normalize/import-now.scss"; 
+@import "../../../bower_components/normalize-scss/sass/normalize/import-now";
 //fotns
-@import "fonts.scss";
+@import "fonts";
 //mixin
-@import "mixins&includes.scss";
+@import "mixins&includes";
 //typography
-@import "typography.scss";
+@import "typography";
 //plugins
-@import "plugins/**/*.scss";
+@import "plugins/**/*.scss"; // sass-lint:disable-line clean-import-paths
 //layout
-@import "layout.scss";
+@import "layout";
 
 //form all
-@import "components/*.scss";
+@import "components/*.scss"; // sass-lint:disable-line clean-import-paths
 
 
 //pages style
-@import "../../modules/**/*.scss";
+@import "../../modules/**/*.scss"; // sass-lint:disable-line clean-import-paths
 
-@import "pages/*.scss";
+@import "pages/*.scss"; // sass-lint:disable-line clean-import-paths
