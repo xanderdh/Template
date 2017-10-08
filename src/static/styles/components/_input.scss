@@ -2,7 +2,7 @@ textarea,
 select,
 .input {
   @include placeholderColor(#888);
-  font-family: $mainFont !important;
+  font-family: $main-font;
   background-color: transparent;
   color: #888;
   font-size: 15px;
@@ -22,7 +22,7 @@ select,
   }
   &:focus {
     border-color: #666;
-    color: $mainFontColor;
+    color: $main-font-color;
   }
   &.error {
     border-color: $red;
@@ -44,7 +44,7 @@ input {
     display: none;
     & + label {
       display: block;
-      background: #fff;
+      background: $white;
       font-size: 14px;
       line-height: 24px;
       padding: 25px 15px;

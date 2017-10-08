@@ -1,19 +1,23 @@
-// sass-lint:disable-all
 //----------------------------------------------------//
 // TYPOGRAPHY                                         //
 //----------------------------------------------------//
 body {
-  background-color: $bodyColor;
-  color: $mainFontColor;
-  font-family: $mainFont, $fixFont;
-  font-size: $mainFontSize;
-  font-weight: $mainFontWeight;
-  line-height: $mainFontHeight;
+  background-color: $body-color;
+  color: $main-font-color;
+  font-family: $main-font, $fix-font;
+  font-size: $main-font-size;
+  font-weight: $main-font-weight;
+  line-height: $main-font-height;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: $mainFont, $fixFont;
-  line-height: $mainFontHeight;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $main-font, $fix-font;
+  line-height: $main-font-height;
   margin: 0;
   padding: 0;
   cursor: default;
@@ -74,7 +78,7 @@ b {
 }
 
 a {
-  color: $linkColor;
+  color: $link-color;
   transition: all .3s ease-in-out;
   text-decoration: underline;
   line-height: 1;
@@ -95,21 +99,21 @@ a {
   vertical-align: top;
 }
 
-
-
-img[style*="float: left"],
-img[style*="float:left"],
-img[align="left"] {
-  margin: 0 20px 5px 0;
+img {
+  &[style*="float: left"],
+  &[style*="float:left"],
+  &[align="left"] {
+    margin: 0 20px 5px 0;
+  }
+  &[style*="float: right"],
+  &[style*="float:right"],
+  &[align="right"] {
+    margin: 0 0 5px 20px;
+  }
 }
 
-img[style*="float: right"],
-img[style*="float:right"],
-img[align="right"] {
-  margin: 0 0 5px 20px;
-}
-
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -167,16 +171,17 @@ ul, ol {
 
   table {
     width: 100%;
-    border-collapse: collapse;    
-    td, th {
+    border-collapse: collapse;
+    td,
+    th {
       border: 1px solid rgba(255, 255, 255, 1);
       text-align: center;
       vertical-align: middle;
       height: 51px;
     }
     th {
-      background-color: #666666;
-      color: #fff;
+      background-color: #666;
+      color: $white;
       font-size: 18px;
       border-top: 0;
     }
@@ -190,8 +195,6 @@ ul, ol {
     }
   }
 }
-
-
 
 .upper {
   text-transform: uppercase;

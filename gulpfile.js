@@ -216,7 +216,12 @@ gulp.task('lint', function () {
                 'property-sort-order' : 0,
                 'empty-line-between-blocks' : 0,
                 'pseudo-element' : 0,
-                'nesting-depth' : 0
+                'nesting-depth' : 0,
+                'mixin-name-format' : 0,
+                'no-vendor-prefixes' : 0,
+                'no-transition-all' : 0,
+                'no-empty-rulesets' : 0,
+                'no-color-literals' : 0 //mb leave it?
             }
         }))
         .pipe(sassLint.format())
