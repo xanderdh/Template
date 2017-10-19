@@ -6,6 +6,7 @@
 
 * Установить [git](https://git-for-windows.github.io/)
 
+
 * Для [NPM](https://www.npmjs.com)
 	- Обновите npm до последней версии
 		Зайти в папку с установленной nodejs
